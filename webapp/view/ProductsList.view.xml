@@ -1,0 +1,42 @@
+<mvc:View
+  controllerName="app.controller.ProductsList"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>productsPageTitle}"
+    showNavButton="true"
+		navButtonPress="onNavBack">
+    <Text text='{invoice>/product}'/>
+		<!-- <ObjectHeader
+			title="Invoice"/> -->
+    <List
+      id="productsList"
+      headerText="{i18n>productsListTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{
+          path : 'invoice>/product',
+          sorter : {
+            path : 'name'
+          }
+        }">
+      <headerToolbar>
+          <Toolbar>
+            <Title text="{i18n>productsListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" search=".onFilterDetails"/>
+          </Toolbar>
+        </headerToolbar>
+      <items>
+        <ObjectListItem
+          title="{invoice>name}"
+          number="{
+            path: 'invoice>currentPrice'
+          }"
+          type="Navigation"
+          press="onPress"
+        />
+      </items>
+    </List>  
+	</Page>
+</mvc:View>
