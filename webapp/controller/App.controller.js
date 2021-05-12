@@ -4,10 +4,8 @@ sap.ui.define([
 	"use strict";
 
 	return BaseController.extend("app.controller.App", {
-
-		onOpenDialog : function () {
+		onListFilter : function () {
 			this.getOwnerComponent().openHelloDialog();
 		}
 	});
-
 });

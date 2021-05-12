@@ -1,8 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
-	"./controller/HelloDialog"
-], function (UIComponent, JSONModel, HelloDialog) {
+	"./controller/FilterDialog"
+], function (UIComponent, JSONModel, FilterDialog) {
 	"use strict";
 
 	return UIComponent.extend("app.Component", {
@@ -25,18 +25,18 @@ sap.ui.define([
 			this.setModel(oModel);
 
 			// set dialog
-			this._helloDialog = new HelloDialog(this.getRootControl());
+			this._filterDialog = new FilterDialog(this.getRootControl());
 			// create the views based on the url/hash
 			this.getRouter().initialize();
 		},
 
 		exit : function () {
-			this._helloDialog.destroy();
-			delete this._helloDialog;
+			this._filterDialog.destroy();
+			delete this._filterDialog;
 		},
 
-		openHelloDialog : function () {
-			this._helloDialog.open();
+		openFilterDialog : function () {
+			this._filterDialog.open();
 		}
 
 	});

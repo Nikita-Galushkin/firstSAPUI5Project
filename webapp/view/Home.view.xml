@@ -1,0 +1,162 @@
+<mvc:View
+	controllerName="app.controller.Home"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		id="page"
+		showHeader="true"
+		title="{i18n>homePageTitle}">
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Title
+						level="H2"
+						text="{i18n>homePageTitle}"/>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<l:BlockLayout background="Light">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell class="sapUiNoContentPadding">
+						<Carousel
+							id="welcomeCarousel"
+							showPageIndicator="false"
+							loop="true">
+							<pages>
+								<VBox renderType="Bare">
+									<Image
+										src="{
+											path: 'view>/welcomeCarouselShipping'
+										}"
+										width="100%"
+										height="100%"/>
+									<Text
+										text="{i18n>welcomeCarouselShipping}"
+                    class="sliderImagesText"/>
+								</VBox>
+								<VBox renderType="Bare">
+									<Image
+										src="{
+											path: 'view>/welcomeCarouselInviteFriend'
+										}"
+										width="100%"
+										height="100%"/>
+									<Text
+										text="{i18n>welcomeCarouselInviteFriend}"
+                    class="sliderImagesText"/>
+								</VBox>
+								<VBox renderType="Bare">
+									<Image
+										src="{
+											path: 'view>/welcomeCarouselTablet'
+											}"
+										width="100%"
+										height="100%"/>
+									<Text
+										text="{i18n>welcomeCarouselTablet}"
+                    class="sliderImagesText"/>
+								</VBox>
+								<VBox renderType="Bare">
+									<Image
+										src="{
+											path: 'view>/welcomeCarouselCreditCard'
+											}"
+										width="100%"
+										height="100%"/>
+									<Text
+										text="{i18n>welcomeCarouselCreditCard}"
+                    class="sliderImagesText"/>
+								</VBox>
+							</pages>
+						</Carousel>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+			<Panel
+				id="panelPromoted"
+				accessibleRole="Region"
+				backgroundDesign="Transparent"
+				class="sapUiNoContentPadding">
+				<headerToolbar >
+					<Toolbar>
+						<Title
+							text="{i18n>promotedTitle}"
+							level="H3"
+							titleStyle="H2"
+							class="sapUiMediumMarginTopBottom"/>
+					</Toolbar>
+				</headerToolbar >
+				<l:BlockLayout background="Dashboard">
+					<l:BlockLayoutRow
+						id="promotedRow"
+						content="{promotedList>/promotedList}">
+						<l:content>
+							<l:BlockLayoutCell>
+								<l:Grid
+									defaultSpan="XL12 L12 M12 S12"
+									vSpacing="0"
+									hSpacing="0">
+									<FlexBox
+										height="3.5rem"
+										renderType="Bare">
+										<l:VerticalLayout>
+											<ObjectIdentifier
+												title="{promotedList>name}"
+												titleActive="true"
+												titlePress="onSelectProduct"
+												class="sapUiTinyMarginBottom"/>
+												<ObjectStatus 
+													text="{
+														path: 'promotedList>Status',
+														formatter: '.formatter.statusText'
+													}"
+													state="{
+														path : 'promotedList>Status',
+														formatter : '.formatter.statusState'
+													}"/>
+										</l:VerticalLayout>
+									</FlexBox>
+									<FlexBox
+										renderType="Bare"
+										justifyContent="Center">
+										<Image
+											src="{
+												path: 'promotedList>img/0'
+											}"
+											densityAware="false"
+											width="50%"
+											height="50%"
+											press="onSelectProduct"
+											alt="{promotedList>name}"/>
+									</FlexBox>
+									<Button
+										tooltip="addToCart"
+										type="Emphasized"
+										press="onAddButtonPress"
+										icon="sap-icon://cart-3">
+										<layoutData>
+											<l:GridData span="XL4 L4 M4 S4" />
+										</layoutData>
+									</Button>
+									<ObjectListItem
+										class="welcomePrice"
+										number="{
+											path : 'promotedList>currentPrice',
+											formatter : '.formatter.price'
+										}"
+										numberUnit="EUR">
+										<layoutData>
+											<l:GridData span="XL8 L8 M8 S8" />
+										</layoutData>
+									</ObjectListItem>
+								</l:Grid>
+							</l:BlockLayoutCell>
+						</l:content>
+					</l:BlockLayoutRow>
+				</l:BlockLayout>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

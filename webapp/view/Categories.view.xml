@@ -1,0 +1,41 @@
+<mvc:View
+	controllerName="app.controller.Categories"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>categoriesPageTitle}"
+		>
+		<subHeader>
+			<Toolbar>
+				<SearchField
+					id="searchField"
+					liveChange="onSearch"
+					placeholder="{i18n>categoriesSearchPlaceholder}"
+					search=".onFilterInvoices">
+				</SearchField>
+			</Toolbar>
+		</subHeader>
+		<List
+			id="categories"
+			headerText="{i18n>categoriesListTitle}"
+			width="auto"
+			items="{
+					path : 'invoice>/Invoices',
+					sorter : {
+						path : 'ProductName'
+					}
+				}">
+			<items>
+				<ObjectListItem
+					iconDensityAware="false"
+					title="{invoice>ProductName}"
+					number="{
+						path: 'invoice>types'
+					}"
+					type="Navigation"
+					press="onPressProductName"
+				/>
+			</items>
+		</List>
+	</Page>
+</mvc:View>

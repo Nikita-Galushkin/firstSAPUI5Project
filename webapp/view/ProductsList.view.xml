@@ -6,16 +6,19 @@
 		title="{i18n>productsPageTitle}"
     showNavButton="true"
 		navButtonPress="onNavBack">
-    <Text text='{invoice>/product}'/>
-		<!-- <ObjectHeader
-			title="Invoice"/> -->
+    <headerContent>
+			<Button
+        id="listFilter"
+				icon="sap-icon://filter"
+				press="onListFilter"/>
+			<ToolbarSpacer/>
+		</headerContent>
     <List
       id="productsList"
       headerText="{i18n>productsListTitle}"
-      class="sapUiResponsiveMargin"
       width="auto"
       items="{
-          path : 'invoice>/product',
+          path : 'invoice>product',
           sorter : {
             path : 'name'
           }
@@ -24,18 +27,32 @@
           <Toolbar>
             <Title text="{i18n>productsListTitle}"/>
             <ToolbarSpacer/>
-            <SearchField width="50%" search=".onFilterDetails"/>
+            <SearchField width="50%" search=".onFilterProducts"/>
           </Toolbar>
         </headerToolbar>
       <items>
         <ObjectListItem
+          icon="{invoice>icon}"
           title="{invoice>name}"
           number="{
-            path: 'invoice>currentPrice'
+            path: 'invoice>currentPrice',
+						formatter : '.formatter.price'
           }"
+          numberUnit="EUR"
           type="Navigation"
-          press="onPress"
-        />
+          press="onPressProduct">
+          <firstStatus>
+						<ObjectStatus 
+              text="{
+                path: 'invoice>Status',
+                formatter: '.formatter.statusText'
+              }"
+              state="{
+                path : 'invoice>Status',
+                formatter : '.formatter.statusState'
+              }"/>
+					</firstStatus>
+				</ObjectListItem>
       </items>
     </List>  
 	</Page>

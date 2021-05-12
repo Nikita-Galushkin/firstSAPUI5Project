@@ -4,8 +4,7 @@ sap.ui.define([
 ], function (ManagedObject, Fragment) {
 	"use strict";
 
-	return ManagedObject.extend("app.controller.HelloDialog", {
-
+	return ManagedObject.extend("app.controller.FilterDialog", {
 		constructor : function (oView) {
 			this._oView = oView;
 		},
@@ -16,18 +15,17 @@ sap.ui.define([
 
 		open : function () {
 			var oView = this._oView;
-
 			// create dialog lazily
 			if (!this.pDialog) {
 				var oFragmentController = {
 					onCloseDialog : function () {
-						oView.byId("helloDialog").close();
+						oView.byId("filterDialog").close();
 					}
 				};
 				// load asynchronous XML fragment
 				this.pDialog = Fragment.load({
 					id: oView.getId(),
-					name: "app.view.HelloDialog",
+					name: "app.view.FilterDialog",
 					controller: oFragmentController
 				}).then(function (oDialog) {
 					// connect dialog to the root view of this component (models, lifecycle)
@@ -38,8 +36,6 @@ sap.ui.define([
 			this.pDialog.then(function(oDialog) {
 				oDialog.open();
 			});
-		}
-
+		},
 	});
-
 });

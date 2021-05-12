@@ -1,0 +1,130 @@
+{
+  "Promoted": [
+    {
+      "name": "Cordless Bluetooth Keyboard, english international",
+      "icon": "./images/HT-1120.jpg",
+      "volumeInStock": 20,
+      "productRating": 4,
+      "img": [
+        "./images/HT-1120.jpg",
+        "https://keeper-shop.ru/images/product_images/popup_images/shop_items_catalog_image124708.jpeg",
+        "https://sp-man.ru/upload/iblock/d3b/d3bc25a4dbb735b54600d8364d1c5f1b.jpeg"
+      ],
+      "currentPrice": 29,
+      "priceBeforeDiscount": 150,
+      "shortDescription": "Cordless Bluetooth Keyboard with English keys",
+      "supplierName": "Technocom",
+      "curreny": "EUR",
+      "weight": "1",
+      "weightUnit": "KG",
+      "dimensionWidth": "51.4",
+      "dimensionWidthUnit": "cm",
+      "dimensionDepth": "23",
+      "dimensionDepthUnit": "cm",
+      "dimensionHeight": "4",
+      "dimensionHeightUnit": "cm",
+      "Status": "A",
+      "reviews": [
+        {
+          "FirstName": "Nicole",
+          "LastName": "Anderson",
+          "mail": "nicole@mail.ru",
+          "avatar": "",
+          "publicDate": "10.08.2020",
+          "rating": "5",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        },
+        {
+          "FirstName": "Alex",
+          "LastName": "Pudov",
+          "mail": "Alex@mail.ru",
+          "avatar": "",
+          "publicDate": "08.03.2020",
+          "rating": "2",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        },
+        {
+          "FirstName": "Kate",
+          "LastName": "Zinoveva",
+          "mail": "Kate@mail.ru",
+          "avatar": "",
+          "publicDate": "5.01.2020",
+          "rating": "1",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        },
+        {
+          "FirstName": "Petrov",
+          "LastName": "Pavel",
+          "mail": "Petrov@mail.ru",
+          "avatar": "",
+          "publicDate": "20.05.2020",
+          "rating": "4",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        }
+      ]
+    },
+    {
+      "name": "ITelO FlexTop I4000",
+      "volumeInStock": 20,
+      "productRating": 4,
+      "img": [
+        "./images/HT-8000.jpg",
+        "https://keeper-shop.ru/images/product_images/popup_images/shop_items_catalog_image124708.jpeg",
+        "https://sp-man.ru/upload/iblock/d3b/d3bc25a4dbb735b54600d8364d1c5f1b.jpeg"
+      ],
+      "icon": "./images/HT-8000.jpg",
+      "currentPrice": 799.00,
+      "priceBeforeDiscount": 250,
+      "shortDescription": "Notebook with 2,80 GHz dual core, 4 GB DDR3 SDRAM, 500 GB Hard Disc, Windows 8",
+      "supplierName": "Titanium",
+      "curreny": "EUR",
+      "weight": "4.7",
+      "weightUnit": "KG",
+      "dimensionWidth": "30",
+      "dimensionWidthUnit": "cm",
+      "dimensionDepth": "19",
+      "dimensionDepthUnit": "cm",
+      "dimensionHeight": "3.1",
+      "dimensionHeightUnit": "cm",
+      "Status": "B",
+          "reviews": [
+        {
+          "FirstName": "Nicole",
+          "LastName": "Anderson",
+          "mail": "nicole@mail.ru",
+          "avatar": "",
+          "publicDate": "10.08.2020",
+          "rating": "5",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        },
+        {
+          "FirstName": "Alex",
+          "LastName": "Pudov",
+          "mail": "Alex@mail.ru",
+          "avatar": "",
+          "publicDate": "08.03.2020",
+          "rating": "2",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        },
+        {
+          "FirstName": "Kate",
+          "LastName": "Zinoveva",
+          "mail": "Kate@mail.ru",
+          "avatar": "",
+          "publicDate": "5.01.2020",
+          "rating": "1",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        },
+        {
+          "FirstName": "Petrov",
+          "LastName": "Pavel",
+          "mail": "Petrov@mail.ru",
+          "avatar": "",
+          "publicDate": "20.05.2020",
+          "rating": "4",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo viverra maeenas accumsan lacus vel facilisis."
+        }
+      ]
+    }
+  ]
+}

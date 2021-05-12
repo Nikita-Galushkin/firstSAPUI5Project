@@ -10,8 +10,8 @@
 			],
 			"fallbackLocale": ""
 		},
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
+		"title": "appTitle",
+		"description": "appDescription",
 		"applicationVersion": {
 			"version": "1.0.0"
 		}
@@ -34,7 +34,9 @@
 		"dependencies": {
 			"minUI5Version": "1.60",
 			"libs": {
-				"sap.m": {}
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
 			}
 		},
 		"models": {
@@ -51,6 +53,18 @@
 			"invoice": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "Invoices.json"
+			},
+			"promoted": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Promoted.json"
+			},
+			"promotedList": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "promotedList.json"
+			},
+			"cartList": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "cartList.json"
 			}
 		},
 		"routing": {
@@ -59,33 +73,61 @@
 				"viewType": "XML",
 				"viewPath": "app.view",
 				"controlId": "app",
-				"controlAggregation": "pages",
+				"controlAggregation": "detailPages",
 				"transition": "slide",
 				"bypassed": {
-					"target": "notFound"
-			  },
+					"target": [
+						"notFound"
+					]
+				},
 				"async": true
 			},
 			"routes": [
 				{
 					"pattern": "",
-					"name": "category",
-					"target": "category"
+					"name": "categories",
+					"target": ["categories", "home"]
 				},
 				{
-					"pattern": "productsList/{productId}",
+					"pattern": "productsList/{productListId}",
 					"name": "productsList",
-					"target": "productsList"
+					"target": ["productsList", "home"]
+				},
+				{
+					"pattern": "productsList/{productListId}/product/{productId}",
+					"name": "product",
+					"target": ["productsList", "product"]
+				},
+				{
+					"pattern": "cart",
+					"name": "cart",
+					"target": ["productsList", "cart"]
 				}
 			],
 			"targets": {
-				"category": {
-					"viewId": "category",
-					"viewName": "Category"
+				"categories": {
+					"viewId": "categories",
+					"controlAggregation": "masterPages",
+					"viewName": "Categories"
+				},
+				"home": {
+					"viewId": "home",
+					"controlAggregation": "detailPages",
+					"viewName": "Home"
 				},
 				"productsList": {
 					"viewId": "productsList",
+					"controlAggregation": "masterPages",
 					"viewName": "ProductsList"
+				},
+				"product": {
+					"viewId": "product",
+					"viewName": "Product"
+				},
+				"cart": {
+					"viewId": "cart",
+					"controlAggregation": "detailPages",
+					"viewName": "Cart"
 				},
 				"notFound": {
 					"viewId": "notFound",

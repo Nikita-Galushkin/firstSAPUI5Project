@@ -6,24 +6,19 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("app.controller.BaseController", {
-
 		getRouter : function () {
 			return UIComponent.getRouterFor(this);
 		},
 
 		onNavBack: function () {
 			var oHistory, sPreviousHash;
-
 			oHistory = History.getInstance();
 			sPreviousHash = oHistory.getPreviousHash();
-
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getRouter().navTo("overview", {}, true /*no history*/);
+				this.getRouter().navTo("home", {}, true /*no history*/);
 			}
 		}
-
 	});
-
 });

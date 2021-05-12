@@ -1,0 +1,83 @@
+<mvc:View
+  controllerName="app.controller.Product"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>productPageTitle}"
+    showNavButton="true"
+		navButtonPress="onNavBack">
+    <headerContent>
+			<Button
+				icon="sap-icon://cart"
+				press="onBasket"/>
+			<ToolbarSpacer/>
+		</headerContent>
+    <footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button
+					icon="sap-icon://cart-3"
+					press="onAddInBasket" />
+			</Toolbar>
+		</footer>
+    <content>
+      <ObjectHeader 
+        title="{invoice>name}"
+        titleLevel="H3"
+        number="{
+            path : 'invoice>currentPrice',
+            formatter: '.formatter.price'
+          }"
+        numberUnit="EUR">
+        <attributes>
+					<ObjectAttribute
+						title="{i18n>productSupplierAttributeText}"
+						text="{invoice>supplierName}" />
+					<ObjectAttribute
+						title="{i18n>productDescriptionAttributeText}"
+						text="{invoice>shortDescription}" />
+					<ObjectAttribute
+						title="{i18n>productWeightAttributeText}"
+						text="{invoice>weight} {invoice>weightUnit}"/>
+					<ObjectAttribute
+						title="{i18n>productMeasuresAttributeText}"
+						text="{invoice>dimensionWidth} {invoice>dimensionWidthUnit}, {invoice>dimensionDepth} {invoice>dimensionDepthUnit}, {invoice>dimensionHeight} {invoice>dimensionHeightUnit}"/>
+				</attributes>
+				<statuses>
+					<ObjectStatus 
+						text="{
+							path: 'invoice>Status',
+							formatter: '.formatter.statusText'
+						}"
+            state="{
+              path : 'invoice>Status',
+							formatter : '.formatter.statusState'
+						}"/>
+				</statuses>
+      </ObjectHeader>
+      <VBox
+        alignItems="Center"
+        renderType="Div">
+        <Image
+          id="productImage"
+          src="{path: 'invoice>img/0'}"
+          decorative="true"
+          densityAware="false"
+          class="sapUiSmallMargin"
+          width="100%"
+          height="100%">
+          <detailBox>
+            <LightBox id="lightBox">
+              <imageContent>
+                <LightBoxItem
+                  imageSrc="{path: 'invoice>img/0'}"
+                  title="{invoice>name}"/>
+              </imageContent>
+            </LightBox>
+          </detailBox>
+        </Image>
+      </VBox>
+    </content>
+	</Page>
+</mvc:View>
+
