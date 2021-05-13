@@ -91,7 +91,7 @@
 				<l:BlockLayout background="Dashboard">
 					<l:BlockLayoutRow
 						id="promotedRow"
-						content="{promotedList>/promotedList}">
+						content="{promotedList>/promotedList/0}">
 						<l:content>
 							<l:BlockLayoutCell>
 								<l:Grid

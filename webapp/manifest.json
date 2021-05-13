@@ -54,10 +54,6 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "Invoices.json"
 			},
-			"promoted": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "Promoted.json"
-			},
 			"promotedList": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "promotedList.json"

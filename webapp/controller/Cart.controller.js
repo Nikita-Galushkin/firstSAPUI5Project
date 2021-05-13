@@ -9,13 +9,20 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function () {
-			var productsList = {
-				"productsArr": []
-			};
+			
+			// debugger
+			// var productsList = {
+			// 	"productsArr": []
+			// };
+
 			var products = JSON.parse(localStorage.getItem("allProducts"));
-			productsList.productsArr.push(products);
-			var oViewModel = new JSONModel(productsList);
-			this.getView().setModel(oViewModel, "view");
+
+			var cartList = this.getOwnerComponent().getModel("cartList").getData().cartList;
+			cartList.push(products);
+
+			// productsList.productsArr.push(products);
+			// var oViewModel = new JSONModel(productsList);
+			// this.getView().setModel(oViewModel, "view");
 		},
 
 		onPressInfo : function () {

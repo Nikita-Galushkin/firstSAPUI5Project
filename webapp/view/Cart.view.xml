@@ -12,7 +12,7 @@
 			<Toolbar>
 				<Text
 					text="Total: {
-						path : 'view>/currentPrice'
+						path : 'cartList>/currentPrice'
 					} EUR" />
 				<ToolbarSpacer/>
 				<Button
@@ -25,18 +25,18 @@
 			<List
 				id="cartList"
 				items="{
-					path : 'view>/productsArr/0'
+					path : 'cartList>/cartList/0'
 				}" 
 				mode="Delete" 
 				delete="onDeleteProduct">
 				<items>
 					<ObjectListItem
 						icon="{
-							path : 'view>icon'
+							path : 'cartList>icon'
 						}"
-						title="{view>name}"
+						title="{cartList>name}"
 						number="{
-							path : 'view>currentPrice',
+							path : 'cartList>currentPrice',
 							formatter: '.formatter.price'
 						}"
 						numberUnit="EUR"
@@ -51,10 +51,10 @@
 						<firstStatus>
 							<ObjectStatus 
 								text="{
-									path: 'view>Status'
+									path: 'cartList>Status'
 								}"
 								state="{
-									path : 'view>Status',
+									path : 'cartList>Status',
 									formatter : '.formatter.statusState'
 								}"/>
 						</firstStatus>

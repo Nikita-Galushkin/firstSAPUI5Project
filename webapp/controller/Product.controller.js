@@ -32,6 +32,10 @@ sap.ui.define([
 
 			// var cartList = this.getView().getModel("cartList").getData().cartList;
 			// cartList.push(oProduct);
+
+			// var cartList = this.getOwnerComponent().getModel("cartList").getData().cartList;
+			// cartList.push(oProduct);
+
 			var existingEntries = JSON.parse(localStorage.getItem("allProducts"));
 			if(existingEntries == null) existingEntries = [];
 			localStorage.setItem("product", JSON.stringify(oProduct));

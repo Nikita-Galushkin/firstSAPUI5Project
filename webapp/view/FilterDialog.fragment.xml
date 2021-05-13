@@ -1,4 +1,4 @@
-<core:FragmentDefinition
+<!-- <core:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<Dialog
@@ -13,4 +13,54 @@
 				press=".onCloseDialog"/>
 		</beginButton>
 	</Dialog>
+</core:FragmentDefinition> -->
+
+
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout">
+	<ViewSettingsDialog
+		id="filterDialog"
+		confirm="handleConfirm"
+		cancel="handleCancel"
+		resetFilters="handleResetFilters">
+		<filterItems>
+			<ViewSettingsFilterItem
+				text="{i18n>availabilityFilterTitle}"
+				key="availabilityKey">
+				<items>
+					<ViewSettingsItem text="{i18n>availableFilterTitle}" key="Available" />
+					<ViewSettingsItem text="{i18n>outOfStockFilterTitle}" key="OutOfStock" />
+					<ViewSettingsItem text="{i18n>discontinuedFilterTitle}" key="Discontinued" />
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsCustomItem
+				text="{i18n>priceFilterTitle}"
+				key="Price">
+				<customControl>
+					<l:VerticalLayout
+						width="100%"
+						class="sapUiContentPadding">
+						<RangeSlider
+							id="rangeSlider"
+							width="100%"
+							value2="5000"
+							class="sapUiSmallMarginTop"
+							max="5000"
+							step="10"
+							change="handleChange"/>
+					</l:VerticalLayout>
+				</customControl>
+			</ViewSettingsCustomItem>
+			<ViewSettingsFilterItem
+					text="{i18n>supplierFilterTitle}"
+					key="supplierKey"
+					items="{invoice>/supplierName}">
+				<items>
+					<ViewSettingsItem text="{view>supplierName}" key="{view>supplierName}" />
+				</items>
+			</ViewSettingsFilterItem>
+		</filterItems>
+	</ViewSettingsDialog>
 </core:FragmentDefinition>

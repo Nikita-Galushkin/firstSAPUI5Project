@@ -25,6 +25,18 @@
 						path : 'ProductName'
 					}
 				}">
+
+				<!-- <infoToolbar>
+					<Toolbar
+						id="categoryInfoToolbar"
+						visible="false">
+						<content>
+							<Title id="categoryInfoToolbarTitle"/>
+						</content>
+					</Toolbar>
+				</infoToolbar> -->
+
+
 			<items>
 				<ObjectListItem
 					iconDensityAware="false"
