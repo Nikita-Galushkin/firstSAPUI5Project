@@ -1,7 +1,8 @@
 sap.ui.define([
 	"app/controller/BaseController",
-	"app/model/formatter"
-], function (BaseController, formatter) {
+	"app/model/formatter",
+	"sap/m/MessageToast"
+], function (BaseController, formatter, MessageToast) {
 	"use strict";
 
 	return BaseController.extend("app.controller.Product", {
@@ -19,6 +20,16 @@ sap.ui.define([
 			oView.bindElement({
 				path : "invoice>/Invoices/" + (Number(oArgs.productListId) - 1) + "/product/" + Number(oArgs.productId)
 			});
+			this._addPromotedProduct();
+		},
+
+		_addPromotedProduct: function () {
+			var oPromotedProduct = this.getView().getBindingContext("invoice").getObject();
+			var existingPromotedEntries = JSON.parse(localStorage.getItem("allPromotedProducts"));
+			if(existingPromotedEntries == null) existingPromotedEntries = [];
+			localStorage.setItem("promotedProduct", JSON.stringify(oPromotedProduct));
+			existingPromotedEntries.push(oPromotedProduct);
+			localStorage.setItem("allPromotedProducts", JSON.stringify(existingPromotedEntries));
 		},
 
 		onBasket : function () {
@@ -27,22 +38,19 @@ sap.ui.define([
 
 		onAddInBasket : function () {
 			var oProduct = this.getView().getBindingContext("invoice").getObject();
-			// var promotedList = this.getView().getModel("promotedList").getData().promotedList;
-			// promotedList.push(oProduct);
+			if(oProduct.Status === "A") {
+				var existingEntries = JSON.parse(localStorage.getItem("allProducts"));
+				if(existingEntries == null) existingEntries = [];
+				localStorage.setItem("product", JSON.stringify(oProduct));
+				existingEntries.push(oProduct);
+				localStorage.setItem("allProducts", JSON.stringify(existingEntries));
 
-			// var cartList = this.getView().getModel("cartList").getData().cartList;
-			// cartList.push(oProduct);
-
-			// var cartList = this.getOwnerComponent().getModel("cartList").getData().cartList;
-			// cartList.push(oProduct);
-
-			var existingEntries = JSON.parse(localStorage.getItem("allProducts"));
-			if(existingEntries == null) existingEntries = [];
-			localStorage.setItem("product", JSON.stringify(oProduct));
-			existingEntries.push(oProduct);
-			localStorage.setItem("allProducts", JSON.stringify(existingEntries));
-
-			
+				MessageToast.show(oProduct.name + " added to cart");
+			} else if (oProduct.Status === "B") {
+				MessageToast.show(oProduct.name + " out of stock");
+			} else {
+				MessageToast.show(oProduct.name + " discontinued");
+			}
 		}
 	});
 });

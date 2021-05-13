@@ -51,7 +51,8 @@
 						<firstStatus>
 							<ObjectStatus 
 								text="{
-									path: 'cartList>Status'
+									path: 'cartList>Status',
+									formatter: '.formatter.statusText'
 								}"
 								state="{
 									path : 'cartList>Status',

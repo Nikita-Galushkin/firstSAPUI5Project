@@ -14,6 +14,12 @@
 						level="H2"
 						text="{i18n>homePageTitle}"/>
 				</contentMiddle>
+				<contentRight>
+					<Button
+						icon="sap-icon://cart"
+						press="onBasket"/>
+					<ToolbarSpacer/>
+				</contentRight>
 			</Bar>
 		</customHeader>
 		<content>
