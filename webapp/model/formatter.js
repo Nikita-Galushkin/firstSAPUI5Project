@@ -37,7 +37,15 @@ sap.ui.define([
 
     statusState: function (sStatus) {
 			return mStatusState[sStatus] || "None";
-		}
+		},
+
+		totalPrice: function (oCartEntries) {
+			let	fTotalPrice = 0;
+			oCartEntries.forEach((product) => {
+				fTotalPrice += product.currentPrice * product.quantity;
+			});
+			return formatter.price(fTotalPrice);
+		},
 	};
 
 	return formatter;

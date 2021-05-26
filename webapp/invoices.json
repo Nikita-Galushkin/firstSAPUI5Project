@@ -30,6 +30,7 @@
           "dimensionHeight": "4",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
           "reviews": [
             {
               "FirstName": "Nicole",
@@ -93,6 +94,7 @@
           "dimensionHeight": "3.5",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
           "reviews": [
             {
               "FirstName": "Nicole",
@@ -156,6 +158,7 @@
           "dimensionHeight": "3",
           "dimensionHeightUnit": "cm",
           "Status": "B",
+          "quantity": 0,
           "reviews": [
             {
               "FirstName": "Nicole",
@@ -218,6 +221,7 @@
           "dimensionHeight": "4",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -289,6 +293,7 @@
           "dimensionHeight": "38",
           "dimensionHeightUnit": "cm",
           "Status": "C",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -352,6 +357,7 @@
           "dimensionHeight": "40.2",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -415,6 +421,7 @@
           "dimensionHeight": "47",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -478,6 +485,7 @@
           "dimensionHeight": "42",
           "dimensionHeightUnit": "cm",
           "Status": "B",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -541,6 +549,7 @@
           "dimensionHeight": "43",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -612,6 +621,7 @@
           "dimensionHeight": "3",
           "dimensionHeightUnit": "cm",
           "Status": "C",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -675,6 +685,7 @@
           "dimensionHeight": "3",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -738,6 +749,7 @@
           "dimensionHeight": "3.1",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -801,6 +813,7 @@
           "dimensionHeight": "3.5",
           "dimensionHeightUnit": "cm",
           "Status": "C",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -872,6 +885,7 @@
           "dimensionHeight": "7",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -935,6 +949,7 @@
           "dimensionHeight": "7",
           "dimensionHeightUnit": "cm",
           "Status": "B",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -998,6 +1013,7 @@
           "dimensionHeight": "0.01",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1061,6 +1077,7 @@
           "dimensionHeight": "3",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1124,6 +1141,7 @@
           "dimensionHeight": "1.2",
           "dimensionHeightUnit": "cm",
           "Status": "C",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1187,6 +1205,7 @@
           "dimensionHeight": "1.3",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1258,6 +1277,7 @@
           "dimensionHeight": "5",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1321,6 +1341,7 @@
           "dimensionHeight": "5",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1384,6 +1405,7 @@
           "dimensionHeight": "5",
           "dimensionHeightUnit": "cm",
           "Status": "B",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1455,6 +1477,7 @@
           "dimensionHeight": "29",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1518,6 +1541,7 @@
           "dimensionHeight": "23",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1581,6 +1605,7 @@
           "dimensionHeight": "12.1",
           "dimensionHeightUnit": "cm",
           "Status": "C",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",
@@ -1644,6 +1669,7 @@
           "dimensionHeight": "4.5",
           "dimensionHeightUnit": "cm",
           "Status": "A",
+          "quantity": 0,
               "reviews": [
             {
               "FirstName": "Nicole",

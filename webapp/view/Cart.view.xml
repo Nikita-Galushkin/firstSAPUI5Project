@@ -8,29 +8,17 @@
 		showNavButton="true"
 		navButtonPress="onNavBack"
 		showFooter="true">
-		<footer>
-			<Toolbar>
-				<Text
-					text="Total: {
-						path : 'cartList>/currentPrice'
-					} EUR" />
-				<ToolbarSpacer/>
-				<Button
-					type="Accept"
-					text="checkout"
-					press="onProceedButtonPress" />
-			</Toolbar>
-		</footer>
 		<content>
 			<List
 				id="cartList"
 				items="{
-					path : 'cartList>/cartList/0'
+					path : 'cartList>/cartList'
 				}" 
 				mode="Delete" 
 				delete="onDeleteProduct">
 				<items>
 					<ObjectListItem
+						intro="{cartList>quantity} x"
 						icon="{
 							path : 'cartList>icon'
 						}"
@@ -63,5 +51,19 @@
 				</items>
 			</List>
 		</content>
+		<footer>
+			<Toolbar>
+				<Text
+					text="Total: {
+						path : 'cartList>/cartList',
+						formatter : '.formatter.totalPrice'
+					} EUR" />
+				<ToolbarSpacer/>
+				<Button
+					type="Accept"
+					text="checkout"
+					press="onCheckout" />
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>

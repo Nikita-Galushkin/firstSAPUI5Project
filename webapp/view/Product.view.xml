@@ -12,14 +12,6 @@
 				press="onBasket"/>
 			<ToolbarSpacer/>
 		</headerContent>
-    <footer>
-			<Toolbar>
-				<ToolbarSpacer/>
-				<Button
-					icon="sap-icon://cart-3"
-					press="onAddInBasket" />
-			</Toolbar>
-		</footer>
     <content>
       <ObjectHeader 
         title="{invoice>name}"
@@ -78,6 +70,14 @@
         </Image>
       </VBox>
     </content>
+    <footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button
+					icon="sap-icon://cart-3"
+					press="onAddInBasket" />
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>
 

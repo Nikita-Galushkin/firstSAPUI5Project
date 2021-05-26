@@ -54,13 +54,13 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "Invoices.json"
 			},
-			"promotedList": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "promotedList.json"
-			},
 			"cartList": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "cartList.json"
+			},
+			"promotedList": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "promotedList.json"
 			}
 		},
 		"routing": {
@@ -98,6 +98,11 @@
 					"pattern": "cart",
 					"name": "cart",
 					"target": ["productsList", "cart"]
+				},
+				{
+					"pattern": "checkout",
+					"name": "checkout",
+					"target": "checkout"
 				}
 			],
 			"targets": {
@@ -124,6 +129,10 @@
 					"viewId": "cart",
 					"controlAggregation": "detailPages",
 					"viewName": "Cart"
+				},
+				"checkout": {
+					"viewId": "checkout",
+					"viewName": "Checkout"
 				},
 				"notFound": {
 					"viewId": "notFound",

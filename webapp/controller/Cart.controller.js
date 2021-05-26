@@ -8,9 +8,9 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function () {
-			var products = JSON.parse(localStorage.getItem("allProducts"));
-			var cartList = this.getOwnerComponent().getModel("cartList").getData().cartList;
-			cartList.push(products);
+			// var products = JSON.parse(localStorage.getItem("allProducts"));
+			// var cartList = this.getOwnerComponent().getModel("cartList").getData().cartList;
+			// cartList.push(products);
 		},
 
 		onPressInfo : function () {
@@ -27,9 +27,14 @@ sap.ui.define([
 			localStorage.setItem("allProducts", JSON.stringify(newProductsList));
 		},
 
-		_deleteListProduct: function (oListItem) {
+		_deleteListProduct : function (oListItem) {
 			var oListCart = this.getView().byId("cartList");
 			oListCart.removeAggregation("items", oListItem);
+		},
+
+		onCheckout : function () {
+			this.getOwnerComponent()._oSplitApp.setMode('HideMode');
+			this.getRouter().navTo("checkout");
 		}
 	});
 });

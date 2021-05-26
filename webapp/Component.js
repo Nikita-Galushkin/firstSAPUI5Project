@@ -1,8 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel",
 	"./controller/FilterDialog"
-], function (UIComponent, JSONModel, FilterDialog) {
+], function (UIComponent, FilterDialog) {
 	"use strict";
 
 	return UIComponent.extend("app.Component", {
@@ -15,19 +14,29 @@ sap.ui.define([
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
 
-			// set data model
-			var oData = {
-				recipient : {
-					name : "World"
-				}
-			};
-			var oModel = new JSONModel(oData);
-			this.setModel(oModel);
-
 			// set dialog
 			this._filterDialog = new FilterDialog(this.getRootControl());
+
 			// create the views based on the url/hash
 			this.getRouter().initialize();
+
+			var oPromotedModel = this.getModel("promotedList");
+			oPromotedModel.dataLoaded().then(function () {
+				var promotedList = localStorage.getItem("allPromotedProducts");
+				if(promotedList) {
+					var aPromotedList = JSON.parse(promotedList);
+					oPromotedModel.setProperty("/promotedList", aPromotedList);
+				}
+			});
+
+			var oCartModel = this.getModel("cartList");
+			oCartModel.dataLoaded().then(function () {
+				var cartList = localStorage.getItem("allProducts");
+				if(cartList) {
+					var aCartList = JSON.parse(cartList);
+					oCartModel.setProperty("/cartList", aCartList);
+				}
+			});
 		},
 
 		exit : function () {

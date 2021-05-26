@@ -16,11 +16,6 @@ sap.ui.define([
 				welcomeCarouselCreditCard: 'images/creditCard.jpg'
 			});
 			this.getView().setModel(oViewModel, "view");
-
-			var products = JSON.parse(localStorage.getItem("allPromotedProducts"));
-
-			var promotedList = this.getOwnerComponent().getModel("promotedList").getData().promotedList;
-			promotedList.push(products);
 		},
 
 		onBasket : function () {
